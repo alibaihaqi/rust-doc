@@ -86,6 +86,12 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Overview', link: '/advanced/' },
+          { text: '01 Async/Await', link: '/advanced/01-async-await' },
+          { text: '02 Concurrency Primitives', link: '/advanced/02-concurrency' },
+          { text: '03 Unsafe Rust', link: '/advanced/03-unsafe-rust' },
+          { text: '04 Macros', link: '/advanced/04-macros' },
+          { text: '05 FFI and C Interop', link: '/advanced/05-ffi' },
+          { text: '06 Performance Tuning', link: '/advanced/06-performance' },
         ]
       },
       {

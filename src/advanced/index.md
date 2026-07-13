@@ -12,12 +12,12 @@ Production-ready patterns and systems programming.
 
 | # | Tutorial | Concepts |
 |---|----------|----------|
-| 01 | [Async/Await](./01-async-await) | `Future`, `async/await`, runtimes, `tokio` |
-| 02 | [Concurrency Primitives](./02-concurrency) | `Mutex`, `RwLock`, `Arc`, channels, `crossbeam` |
-| 03 | [Unsafe Rust](./03-unsafe-rust) | `unsafe`, raw pointers, FFI, invariants |
-| 04 | [Macros](./04-macros) | Declarative macros, procedural macros, derive |
-| 05 | [FFI and C Interop](./05-ffi) | `extern "C"`, bindgen, `cxx`, passing data |
-| 06 | [Performance Tuning](./06-performance) | Profiling, SIMD, allocation, zero-cost abstractions |
+| 01 | [Async/Await](./01-async-await) | `Future`, `async`/`await`, Tokio runtime, `join!`, `select!` |
+| 02 | [Concurrency Primitives](./02-concurrency) | `Mutex`, `RwLock`, `Arc`, channels, `crossbeam`, `rayon` |
+| 03 | [Unsafe Rust](./03-unsafe-rust) | `unsafe`, raw pointers, FFI, soundness, Miri |
+| 04 | [Macros](./04-macros) | `macro_rules!`, procedural macros, derive/attribute/function-like |
+| 05 | [FFI and C Interop](./05-ffi) | `extern "C"`, bindgen, cxx, memory management |
+| 06 | [Performance Tuning](./06-performance) | Profiling, SIMD, cache-friendly code, LTO, zero-cost abstractions |
 
 ## Prerequisites
 
