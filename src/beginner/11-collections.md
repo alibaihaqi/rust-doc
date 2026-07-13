@@ -1,16 +1,16 @@
 ---
-title: 09 Collections
+title: 11 Collections
 tier: beginner
 platform: rust
 ---
 
-# 09 Collections
+# 11 Collections
 
 ## Goal
 
-Use vectors, strings, and hash maps - the three most common collections.
+Use vectors, strings, and hash maps — the three most common collections.
 
-## Vectors - `Vec<T>`
+## Vectors — `Vec<T>`
 
 ```rust
 fn main() {
@@ -40,7 +40,25 @@ fn main() {
 }
 ```
 
-## Strings - `String` and `&str`
+### Using an Enum to Store Multiple Types
+
+```rust
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
+fn main() {
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
+}
+```
+
+## Strings — `String` and `&str`
 
 ```rust
 fn main() {
@@ -64,24 +82,26 @@ fn main() {
 }
 ```
 
-### Indexing
+### Indexing Strings
 
 ```rust
-let s = String::from("hello");
-// let h = s[0]; // ERROR - no direct indexing
-
-// Bytes
-for b in "hello".bytes() {
-    println!("{}", b);
-}
-
-// Chars (Unicode scalar values)
-for c in "नमस्ते".chars() {
-    println!("{}", c);
+fn main() {
+    let s = String::from("hello");
+    // let h = s[0]; // ERROR: no direct indexing
+    
+    // Bytes
+    for b in "hello".bytes() {
+        println!("{}", b);
+    }
+    
+    // Chars (Unicode scalar values)
+    for c in "नमस्ते".chars() {
+        println!("{}", c);
+    }
 }
 ```
 
-## Hash Maps - `HashMap<K, V>`
+## Hash Maps — `HashMap<K, V>`
 
 ```rust
 use std::collections::HashMap;
@@ -99,10 +119,36 @@ fn main() {
     for (key, value) in &scores {
         println!("{}: {}", key, value);
     }
+}
+```
+
+### Hash Maps and Ownership
+
+```rust
+fn main() {
+    let field = String::from("Favorite color");
+    let value = String::from("Blue");
     
-    // Update patterns
-    scores.entry(String::from("Blue")).or_insert(50);
-    scores.entry(String::from("Red")).or_insert(50);
+    let mut map = HashMap::new();
+    map.insert(field, value);
+    // field and value are moved!
+    // println!("{}", field); // ERROR
+}
+```
+
+### Updating Hash Maps
+
+```rust
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+    
+    // Overwrite
+    scores.insert(String::from("Blue"), 20);
+    
+    // Only insert if absent
+    scores.entry(String::from("Yellow")).or_insert(50);
+    scores.entry(String::from("Blue")).or_insert(50); // won't change
     
     // Update based on old value
     let text = "hello world wonderful world";
@@ -138,6 +184,18 @@ fn main() {
 }
 ```
 
+Output:
+```
+brown: 1
+dog: 1
+fox: 1
+jumps: 1
+lazy: 1
+over: 1
+quick: 1
+the: 2
+```
+
 ## Next
 
-Continue to [10 Error Handling](./10-error-handling).
+Continue to [Intermediate Tier](../intermediate/).

@@ -60,8 +60,11 @@ export default defineConfig({
           { text: '04 Data Types', link: '/beginner/04-data-types' },
           { text: '05 Functions', link: '/beginner/05-functions' },
           { text: '06 Control Flow', link: '/beginner/06-control-flow' },
-          { text: '07 Structs', link: '/beginner/07-structs' },
-          { text: '08 Enums and Pattern Matching', link: '/beginner/08-enums-and-pattern-matching' },
+          { text: '07 Ownership', link: '/beginner/07-ownership' },
+          { text: '08 References and Borrowing', link: '/beginner/08-references-and-borrowing' },
+          { text: '09 Structs', link: '/beginner/09-structs' },
+          { text: '10 Enums and Pattern Matching', link: '/beginner/10-enums-and-pattern-matching' },
+          { text: '11 Collections', link: '/beginner/11-collections' },
         ]
       },
       {
