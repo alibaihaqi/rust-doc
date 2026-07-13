@@ -1,0 +1,25 @@
+{
+  "name": "rust-docs",
+  "version": "1.0.0",
+  "description": "documentation for develop rust",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alibaihaqi/rust-doc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alibaihaqi/rust-doc/issues"
+  },
+  "homepage": "https://github.com/alibaihaqi/rust-doc#readme",
+  "devDependencies": {
+    "vitepress": "1.6.4"
+  }
+}
