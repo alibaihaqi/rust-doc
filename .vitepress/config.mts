@@ -100,6 +100,18 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/rust-language/' },
           { text: '01 Why Rust', link: '/rust-language/01-why-rust' },
+          { text: '02 Variables and Types', link: '/rust-language/02-variables-and-types' },
+          { text: '03 Ownership and Borrowing', link: '/rust-language/03-ownership-and-borrowing' },
+          { text: '04 Structs and Enums', link: '/rust-language/04-structs-and-enums' },
+          { text: '05 Pattern Matching', link: '/rust-language/05-pattern-matching' },
+          { text: '06 Traits and Generics', link: '/rust-language/06-traits-and-generics' },
+          { text: '07 Error Handling', link: '/rust-language/07-error-handling' },
+          { text: '08 Testing', link: '/rust-language/08-testing' },
+          { text: '09 Concurrency', link: '/rust-language/09-concurrency' },
+          { text: '10 Async Programming', link: '/rust-language/10-async-programming' },
+          { text: '11 Standard Library Tour', link: '/rust-language/11-standard-library' },
+          { text: '12 Macros', link: '/rust-language/12-macros' },
+          { text: '13 Unsafe Rust', link: '/rust-language/13-unsafe-rust' },
         ]
       }
     ],
