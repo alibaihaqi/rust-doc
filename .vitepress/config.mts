@@ -72,6 +72,13 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Overview', link: '/intermediate/' },
+          { text: '01 Collections Deep Dive', link: '/intermediate/01-collections' },
+          { text: '02 Error Handling', link: '/intermediate/02-error-handling' },
+          { text: '03 Generic Types', link: '/intermediate/03-generic-types' },
+          { text: '04 Traits', link: '/intermediate/04-traits' },
+          { text: '05 Lifetimes', link: '/intermediate/05-lifetimes' },
+          { text: '06 Modules and Crates', link: '/intermediate/06-modules-and-crates' },
+          { text: '07 Automated Tests', link: '/intermediate/07-automated-tests' },
         ]
       },
       {
